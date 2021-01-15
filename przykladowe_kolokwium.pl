@@ -13,7 +13,7 @@ suffix(L1,L2) :- append(X, L1, L2).
 palindrom([]).
 palindrom(L) :- reverse(L,L).
 
-%a L1 zawiera wszystkie elementy listy L mniejsze od X a L2 większe
+%a L1 zawuera wszystkie elementy listy L mniejsze od X a L2 większe
 
 split(X,[],[],[]).
 split(X, [Y|L], [Y|L1], L2) :- Y > X, split(X, L,L1,L2).
@@ -34,7 +34,7 @@ odd(X) :- X < 0, X1 is X + 1, even(X1).
 
 
 split1(F,[],[],[]).
-split1(F, [Y|L], [Y|L1], L2) :- call(F, Y), split1(F, L, L1, L2).
+split1(F, [Y|L], [Y|L1], L2) :- call(F, Y), split1(F, L, L1, L2).--
 split1(F, [Y|L], L1, [Y|L2]) :- split1(F, L, L1, L2).
 
 % drzewo(2, drzewo(1,nil,nil), drzewo(4,drzewo(3,nil,nil),drzewo(6,nil,nil)))
